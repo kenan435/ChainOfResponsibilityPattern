@@ -2,6 +2,8 @@ package com.kenan.lab.ChainOfResposibilityPattern;
 
 public class DivideNumbers implements Chain {
 
+    // Last one in the chain so no forwarding to the next operation.
+    @SuppressWarnings( "unused" )
     private Chain nextInChain;
 
     public void setNextChain( final Chain nextChain ) {

@@ -6,7 +6,6 @@ public class AddNumbers implements Chain {
 
     // Defines the next Object to receive the
     // data if this one can't use it
-
     public void setNextChain( final Chain nextChain ) {
 
         nextInChain = nextChain;
@@ -15,7 +14,6 @@ public class AddNumbers implements Chain {
 
     // Tries to calculate the data, or passes it
     // to the Object defined in method setNextChain()
-
     public void calculate( final Numbers request ) {
 
         if ( request.getCalcWanted() == "add" ) {

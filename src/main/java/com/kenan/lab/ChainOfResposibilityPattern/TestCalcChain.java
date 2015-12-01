@@ -5,7 +5,6 @@ public class TestCalcChain {
     public static void main( final String[] args ) {
 
         // Here I define all of the objects in the chain
-
         final Chain chainCalc1 = new AddNumbers();
         final Chain chainCalc2 = new SubtractNumbers();
         final Chain chainCalc3 = new MultNumbers();
@@ -13,14 +12,12 @@ public class TestCalcChain {
 
         // Here I tell each object where to forward the
         // data if it can't process the request
-
         chainCalc1.setNextChain( chainCalc2 );
         chainCalc2.setNextChain( chainCalc3 );
         chainCalc3.setNextChain( chainCalc4 );
 
         // Define the data in the Numbers Object
         // and send it to the first Object in the chain
-
         final Numbers request = new Numbers( 4, 2, "sub" );
 
         chainCalc1.calculate( request );
